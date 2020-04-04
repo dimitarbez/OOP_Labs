@@ -35,7 +35,7 @@ private:
     int brojVraboteni;
 
 public:
-    Fabrika(Rabotnik *rab, int brojVraboteni) : brojVraboteni(brojVraboteni)
+    Fabrika(Rabotnik* rab, int brojVraboteni) : brojVraboteni(brojVraboteni)
     {
         for (size_t i = 0; i < 100; i++)
         {
@@ -69,6 +69,7 @@ int main()
 
     Rabotnik *rabotnik = new Rabotnik[n];
 
+    
     for (size_t i = 0; i < n; i++)
     {
         char ime[30], prezime[30];

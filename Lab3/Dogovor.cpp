@@ -48,7 +48,7 @@ public:
         {
             for (size_t j = 0; j < 3; j++)
             {
-                if ((strcmp(potpisuvaci[i].GetEmbg(), potpisuvaci[j].GetEmbg()) == 0) && (i != j))
+                if ((strcmp(potpisuvaci[i].GetEmbg(), potpisuvaci[j].GetEmbg()) == 0)&&(i != j))
                 {
                     //cout << "|" << potpisuvaci[i].GetEmbg() << "|" << potpisuvaci[j].GetEmbg() << "|";
                     return true;

@@ -5,13 +5,16 @@ using namespace std;
 class Category
 {
 private:
-    char name[20] = "unnamed";
+    char name[20];
 public:
     Category(char* name) 
     {
         strncpy(this->name, name, 20);
     }
-    Category() {}
+    Category()
+    {
+        strncpy(name, "unnamed", 20);
+    }
     ~Category() {}
     void print()
     {
@@ -23,9 +26,12 @@ class NewsArticle
 {
 private:
     Category category;
-    char title[30] = "untitled";
+    char title[30];
 public:
-    NewsArticle() {}
+    NewsArticle() 
+    {
+        strncpy(title, "untitled", 30);
+    }
     NewsArticle(Category category, char* title = "untitled") 
         :category(category)
     {
@@ -44,10 +50,13 @@ class FrontPage
 {
 private:
     NewsArticle article;
-    float price = 0;
-    int editionNumber = 0;
+    float price;
+    int editionNumber;
 public:
-    FrontPage() {}
+    FrontPage()
+        :price(0), editionNumber(0)
+    {
+    }
     FrontPage(NewsArticle article, float price = 0, int editionNumber = 0)
         :article(article), price(price), editionNumber(editionNumber)
     {

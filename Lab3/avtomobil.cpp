@@ -22,10 +22,14 @@ public:
 class Person
 {
 private:
-    char name[20] = "not specified";
-    char surname[20] = "not specified";
+    char name[20];
+    char surname[20];
 public:
-    Person() {}
+    Person() 
+    {
+        strncpy(this->name, "not specified", 20);
+        strncpy(this->surname, "not specified", 20);
+    }
     Person(char* name, char* surname) 
     {
         strncpy(this->name, name, 20);
@@ -45,10 +49,13 @@ class Car
 private:
     Person owner;
     Date date;
-    float price = 0;
+    float price;
 public:
     Car(Person owner, Date date, float price) : owner(owner), date(date), price(price) {}
-    Car() {}
+    Car() 
+    	:price(0)
+    {
+    }
     ~Car() {}
     void print()
     {
